@@ -1,4 +1,4 @@
-/*import Cart from "./cart";*/
+
 
 import request from "./bestbuy";
 
@@ -27,7 +27,6 @@ export default class App{
 
 	initBBCall(categoryPath) {
 
-		//if {#laptop = click.on "laptop" ()}
 		console.log(categoryPath);
 
 		var urlNew = "https://api.bestbuy.com/v1/products(" + categoryPath + ")";
@@ -36,7 +35,7 @@ export default class App{
 		.then(data => {
 
 			console.log(data);
-			//document.getElementById("laptops").innerHTML=(data.products[0].name);
+			
   
     $("#productcontainer")["0"].innerHTML = "";
 
@@ -57,7 +56,7 @@ export default class App{
 
 
 		}	
-			/* fill carosel with products */
+			
 		})
 		.catch(error => {
 			console.log("warning Christopher Robins... Error");

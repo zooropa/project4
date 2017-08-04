@@ -31,7 +31,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /*import Cart from "./cart";*/
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _bestbuy = require("./bestbuy");
 
@@ -70,7 +70,6 @@ var App = function () {
 		key: "initBBCall",
 		value: function initBBCall(categoryPath) {
 
-			//if {#laptop = click.on "laptop" ()}
 			console.log(categoryPath);
 
 			var urlNew = "https://api.bestbuy.com/v1/products(" + categoryPath + ")";
@@ -78,7 +77,6 @@ var App = function () {
 			(0, _bestbuy2.default)({ url: urlNew, api: "8ccddf4rtjz5k5btqam84qak" }).then(function (data) {
 
 				console.log(data);
-				//document.getElementById("laptops").innerHTML=(data.products[0].name);
 
 				$("#productcontainer")["0"].innerHTML = "";
 
@@ -95,7 +93,6 @@ var App = function () {
 						product_counter++;
 					}
 				}
-				/* fill carosel with products */
 			}).catch(function (error) {
 				console.log("warning Christopher Robins... Error");
 				console.log(error);
